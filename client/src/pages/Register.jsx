@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 function Register() {
     const [names, setNames] = useState()
@@ -37,6 +37,7 @@ function Register() {
                     <input type="submit" />
                 </label>
             </form>
+            <Link to="/">cancel</Link>
         </div>
     )
 }

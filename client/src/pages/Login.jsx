@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 
 function Login() {
@@ -41,6 +41,7 @@ function Login() {
           <input type="submit" />
         </label>
       </form>
+      <Link to="/">cancel</Link>
     </div>
   )
 }
