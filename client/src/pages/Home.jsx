@@ -6,7 +6,7 @@ function Home() {
   const [message, setMessage] = useState();
   const navigate = useNavigate();
   const [loading, setLoading] = useState(true);
-  const [userEmail, setUserEmail] = useState();
+  const [userNames, setUserNames] = useState();
 
   useEffect(() => {
     const fetchToken = async () => {
@@ -16,7 +16,7 @@ function Home() {
         });
 
         setMessage(response.data && response.data.message);
-        setUserEmail(response.data.userInfo.names)
+        setUserNames(response.data.userInfo.names)
       } catch (err) {
         console.error('Error:', err.response && err.response.data && err.response.data.message);
 
@@ -40,7 +40,7 @@ function Home() {
 
   return (
     <div>
-      <p>Hello, { userEmail }</p>
+      <p>Hello, { userNames }</p>
       <h1>{message}</h1>
     </div>
   );
