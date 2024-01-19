@@ -10,7 +10,7 @@ const port = 5000
 app.use(cors())
 app.use(bodyParser.json())
 
-mongoose.connect('mongodb+srv://kevin:mbonimpaye1@crud.s9jq02z.mongodb.net/bytehub', {
+mongoose.connect('mongodb+srv://kevin:mbonimpaye1@custer2024.rzlybv8.mongodb.net/bytehub', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
