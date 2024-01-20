@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import Navbar from '../components/Navbar'
 
 function AllDesigns() {
   const [message, setMessage] = useState();
   const navigate = useNavigate();
-  const [loading, setLoading] = useState(true);
   const [userNames, setUserNames] = useState();
 
   useEffect(() => {
@@ -18,33 +18,22 @@ function AllDesigns() {
         setMessage(response.data && response.data.message);
         setUserNames(response.data.userInfo.names)
       } catch (err) {
-        console.error('Error:', err.response && err.response.data && err.response.data.message);
-
-        // Redirect to login on 403 Forbidden
-        if (err.response && err.response.status === 403) {
+          console.log(err)
           navigate('/login');
-        }
-      } finally {
-        // Set loading to false once the request is complete
-        setLoading(false);
-      }
+      } 
     };
 
     fetchToken();
-  }, [navigate]);
+  }, []);
 
   const logout = () => {
     localStorage.clear("token");
     location.reload();
   }
 
-  // Render loading message while fetching data
-  if (loading) {
-    return <></>;
-  }
-
   return (
     <div>
+      <Navbar />
       <p>Hello, { userNames } <button onClick={logout}>Log Out</button></p>
       <h1>{message}</h1>
     </div>

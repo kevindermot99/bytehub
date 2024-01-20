@@ -42,8 +42,8 @@ function LandingPage() {
       <Navbar />
       <div className='hero'>
         <h5>Get exclusive designs & other Freatures By signing up now!</h5>
-        <h1>Get inspired Today!! a world of unlimited UI designs, just for you!</h1>
-        <p>Step into a fun world of creativity with Bytehub! Here, amazing ideas turn into cool pictures and designs. Join our community now to get special stuff, enjoy our unique creations, and let your own creative ideas fly high!</p>
+        <h1>Unlimited UI designs, just for you!</h1>
+        <p>Step into a fun world of amazing Designs. Get inspired in a second! </p>
         {/* <div><Link to="/home">Home</Link><Link to="/login">Login</Link><Link to="/register">Register</Link></div> */}
         <div className='herobtns'>
           <Link to="/"><MdAddPhotoAlternate /> Submit A Design</Link>
@@ -52,6 +52,17 @@ function LandingPage() {
       </div>
 
       <div class="gallery">
+
+        <div class="gallery-item">
+          <img className='post' src={design6} />
+          <div className='owner'>
+            <img className='profile' src={person6} />
+            <div className='op-details'>
+              <h1><span>Olivia</span><span><FaRegEye /> 3.2M</span></h1>
+              <p>a month ago</p>
+            </div>
+          </div>
+        </div>
 
         <div class="gallery-item">
           <img className='post' src={design1} />
@@ -104,17 +115,6 @@ function LandingPage() {
             <div className='op-details'>
               <h1><span>Sophia</span><span><FaRegEye /> 231</span></h1>
               <p>Today</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="gallery-item">
-          <img className='post' src={design6} />
-          <div className='owner'>
-            <img className='profile' src={person6} />
-            <div className='op-details'>
-              <h1><span>Olivia</span><span><FaRegEye /> 3.2M</span></h1>
-              <p>a month ago</p>
             </div>
           </div>
         </div>
@@ -227,12 +227,12 @@ function LandingPage() {
               <p>5 days ago</p>
             </div>
           </div>
-        </div>        
+        </div>
 
         <div class="gallery-item">
           <img className='post' src={design17} />
           <div className='owner'>
-            <img className='profile' src={person6 } />
+            <img className='profile' src={person6} />
             <div className='op-details'>
               <h1><span>Emily</span> <span><FaRegEye /> 249</span></h1>
               <p>1 days ago</p>

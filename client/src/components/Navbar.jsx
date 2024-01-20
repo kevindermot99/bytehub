@@ -4,6 +4,7 @@ import { FaSearch } from "react-icons/fa";
 import { GrClose } from "react-icons/gr";
 
 function Navbar() {
+
     return (
         <div className='navbar'>
             <ul>
@@ -22,7 +23,8 @@ function Navbar() {
                         <FaSearch className='srch' />
                         <input type="search" placeholder='Search Designs' />
                     </form>
-                    <Link to='/login' className='button'>Login</Link>
+                        <Link to='/login' className='button lgn'>Log in</Link>
+                        <Link to='/register' className='button'>Sign up</Link>
                 </div>
             </ul>
         </div>
