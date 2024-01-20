@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import { Link, useNavigate } from 'react-router-dom'
+import cardBg from '../images/card-bg.jpg'
 
 
 function Login() {
@@ -28,8 +29,12 @@ function Login() {
   }
 
   return (
-    <div>
-      <h1>Login</h1>
+    <div className='auth-page'>
+      <div className="ap-left">
+        <img src={cardBg} />
+      </div>
+      <div className="ap-right">
+        <h1>Login</h1>
       <form onSubmit={handleLogin}>
         <label>
           <input type="email" placeholder='Email' onChange={(e) => setEmail(e.target.value)} />
@@ -41,7 +46,9 @@ function Login() {
           <input type="submit" />
         </label>
       </form>
-      <Link to="/">cancel</Link>
+      </div>
+      
+      {/* <Link to="/">cancel</Link> */}
     </div>
   )
 }

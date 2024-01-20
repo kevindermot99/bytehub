@@ -10,10 +10,7 @@ const port = 5000
 app.use(cors())
 app.use(bodyParser.json())
 
-mongoose.connect('mongodb+srv://kevin:mbonimpaye1@custer2024.rzlybv8.mongodb.net/bytehub', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-})
+mongoose.connect('mongodb+srv://kevin:mbonimpaye1@custer2024.rzlybv8.mongodb.net/bytehub')
 
 // User Model
 const User = mongoose.model('User', {
@@ -82,7 +79,7 @@ const authenticateToken = (req, res, next) => {
 
 
 // Protected Route HOME
-app.get('/api/home', authenticateToken, async (req, res) => {
+app.get('/api/alldesigns', authenticateToken, async (req, res) => {
     try {
         const user = await User.findOne({ email: req.user.email });
 

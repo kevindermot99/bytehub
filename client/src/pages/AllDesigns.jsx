@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
-function Home() {
+function AllDesigns() {
   const [message, setMessage] = useState();
   const navigate = useNavigate();
   const [loading, setLoading] = useState(true);
@@ -11,7 +11,7 @@ function Home() {
   useEffect(() => {
     const fetchToken = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/home', {
+        const response = await axios.get('http://localhost:5000/api/alldesigns', {
           headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
         });
 
@@ -33,6 +33,11 @@ function Home() {
     fetchToken();
   }, [navigate]);
 
+  const logout = () => {
+    localStorage.clear("token");
+    location.reload();
+  }
+
   // Render loading message while fetching data
   if (loading) {
     return <></>;
@@ -40,10 +45,10 @@ function Home() {
 
   return (
     <div>
-      <p>Hello, { userNames }</p>
+      <p>Hello, { userNames } <button onClick={logout}>Log Out</button></p>
       <h1>{message}</h1>
     </div>
   );
 }
 
-export default Home;
+export default AllDesigns;
