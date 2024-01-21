@@ -24,7 +24,7 @@ function Login() {
       e.preventDefault();
       const response = await axios.post('http://localhost:5000/api/login', { email, password });
       localStorage.setItem('token', response.data.token);
-      navigate('/')
+      navigate('/', { replace: true })
     }
 
     catch (err) {
@@ -34,7 +34,7 @@ function Login() {
 
   }
 
-  const rockAnimationOptions ={
+  const rockAnimationOptions = {
     loop: false,
     autoplay: true,
     animationData: lockAnimation,
@@ -45,7 +45,9 @@ function Login() {
       <div className="ap-card">
 
         <div className="apc-left">
-          <Lottie options={rockAnimationOptions}></Lottie>
+          <div className="lottie-container">
+            <Lottie options={rockAnimationOptions}></Lottie>
+          </div>
         </div>
         <div className="apc-right">
           <h1>Bytehub.</h1>
@@ -72,7 +74,7 @@ function Login() {
             <button><img src={google} />with Google</button>
             <button><img src={github} />with Github</button>
           </div>
-          <Link to="/">X</Link>
+          <Link className='close' to="/">X</Link>
         </div>
         <ToastContainer />
       </div>

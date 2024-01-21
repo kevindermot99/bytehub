@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import Navbar from '../components/Navbar'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function AllDesigns() {
   const [message, setMessage] = useState();
@@ -18,8 +20,8 @@ function AllDesigns() {
         setMessage(response.data && response.data.message);
         setUserNames(response.data.userInfo.names)
       } catch (err) {
-          console.log(err)
-          navigate('/login');
+          alert(err);
+          navigate('/');
       } 
     };
 
@@ -36,6 +38,7 @@ function AllDesigns() {
       <Navbar />
       <p>Hello, { userNames } <button onClick={logout}>Log Out</button></p>
       <h1>{message}</h1>
+      <ToastContainer />
     </div>
   );
 }
