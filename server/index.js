@@ -1,14 +1,13 @@
 const express = require('express');
 const cors = require('cors');
 const bcrypt = require('bcrypt');
-const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const jwt = require('jsonwebtoken');
 
 const app = express()
 const port = 5000
 app.use(cors())
-app.use(bodyParser.json())
+app.use(express.json())
 
 mongoose.connect('mongodb+srv://kevin:mbonimpaye1@custer2024.rzlybv8.mongodb.net/bytehub')
 
@@ -85,8 +84,49 @@ const authenticateToken = (req, res, next) => {
     });
 };
 
+app.put('/api/updateUser/:id', async (req, res) => {
+    try {
+        const id = req.params.id;
+        const updatedUser = await User.findByIdAndUpdate(id, {
+            names: req.body.newName
+        });
+        res.json({ message: "OK" });
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ message: "Internal server error" });
+    }
+});
 
-// Protected Route HOME
+app.delete('/api/deleteUser/:id', async (req,res) => {
+    try{
+        const id = req.params.id;
+        const password = req.body.password;
+
+        const user = await User.findById({_id: id})
+
+        if(user){
+            const passwordCheck = await bcrypt.compare(password, user.password)
+
+            if(passwordCheck){
+                await User.findByIdAndDelete(id)
+                res.status(200).json({message: "deleted"})
+            }
+            else{
+                res.status(401).json({message: "incorect password"})
+            }
+        }
+        else{
+            res.status(401).json({message: "User doesn't exist !! "})
+        }
+
+        
+    }
+    catch (err){
+        res.status(500).json({message: "Internal server error"})
+    }
+})
+
+// auth
 app.get('/api/auth', authenticateToken, async (req, res) => {
     try {
         const user = await User.findOne({ email: req.user.email });
@@ -94,7 +134,7 @@ app.get('/api/auth', authenticateToken, async (req, res) => {
         if (!user) {
             return res.status(404).json({ message: "User not Found" })
         }
-        const userInfo = { email: req.user.email, names: user.names };
+        const userInfo = user;
 
         res.json({ userInfo })
     }
@@ -105,6 +145,8 @@ app.get('/api/auth', authenticateToken, async (req, res) => {
     
     
 })
+
+
 
 app.listen(port, () => {
     console.log(`Server is runnig on ${port} niggah !`)
