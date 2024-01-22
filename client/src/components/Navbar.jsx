@@ -27,6 +27,7 @@ function Navbar() {
             catch (err) {
                 console.log(err)
                 setAuthbtns(true)
+                setAuthorized(false)
             }
         };
 
@@ -38,18 +39,18 @@ function Navbar() {
     }
 
     const logout = async () => {
-        try{
+        try {
             setLoggingOut(true)
             await localStorage.removeItem("token")
             setTimeout(() => {
-                window.location.reload() 
+                window.location.reload()
             }, 1000);
-            
+
         }
-        catch(err){
+        catch (err) {
             console.log(err)
         }
-        
+
     }
 
     return (
@@ -60,7 +61,7 @@ function Navbar() {
                     <div className='nav-links'>
                         {/* <Link to="/">Home</Link> */}
                         <Link to="/alldesigns">All Designs</Link>
-                        <Link to={authorized ? '/mylibrary' : '/login'}>my Library</Link>
+                        <Link to='/mylibrary'>my Library</Link>
                         <a href="https://github.com/kevindermot99/bytehub" target="_blank">GitHub</a>
                         <Link to="/">Creator</Link>
                     </div>
@@ -72,7 +73,7 @@ function Navbar() {
                     </form>
                     {authorized ? (
                         <>
-                            <p className={`account-letter ${openAccountMenu? "open-modal" : ''}`} onClick={toggleModal}>{userNames.charAt(0)}</p>
+                            <p className={`account-letter ${openAccountMenu ? "open-modal" : ''}`} onClick={toggleModal}>{userNames.charAt(0)}</p>
                             <div className='account-menu'>
                                 <h4>{userNames}</h4>
                                 <p>{userEmail}</p>

@@ -72,6 +72,7 @@ app.post('/api/login', async (req, res) => {
 // Middleware to check authentication
 const authenticateToken = (req, res, next) => {
     const token = req.header('Authorization');
+    
     if (!token) return res.status(401).json({ message: 'Unauthorized: Missing token' });
 
     jwt.verify(token.split(' ')[1], 'bytehub', (err, decodedToken) => {
