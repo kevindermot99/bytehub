@@ -24,9 +24,16 @@ app.post('/api/register', async (req, res) => {
     try {
         const { names, email, password } = req.body;
         const hashedPassword = await bcrypt.hash(password, 10);
-        const user = new User({ names: names, email: email, password: hashedPassword });
-        await user.save();
-        res.status(201).json({ message: 'User registered successfully' });
+
+        const checkingEmailInDb = await User.findOne({email})
+
+        if(!checkingEmailInDb){
+            const user = new User({ names: names, email: email, password: hashedPassword });
+            await user.save();
+            res.status(201).json({ message: 'User registered successfully' });
+        } else{
+            res.status(403).json({ message: 'Email already exists !' })
+        }
     } catch (error) {
         console.error(error);
         res.status(500).json({ message: 'Internal server error' });

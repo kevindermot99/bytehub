@@ -29,7 +29,7 @@ function Login() {
 
     catch (err) {
       setSubmitting(false)
-      toast(err.response.data.message)
+      toast.error(err.response.data.message)
     }
 
   }
@@ -55,7 +55,7 @@ function Login() {
           <form onSubmit={handleLogin} className={submitting ? 'submitting' : ''}>
             <label>
               <p>Email</p>
-              <input type="email" placeholder='someone@example.com' onChange={(e) => setEmail(e.target.value)} required />
+              <input type="email" autoComplete='on' placeholder='someone@example.com' onChange={(e) => setEmail(e.target.value)} required />
             </label>
             <label>
               <p>Password</p>

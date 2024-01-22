@@ -20,11 +20,11 @@ function Register() {
         setSubmitting(true)
         try {
             e.preventDefault();
-            await axios.post('http://localhost:5000/api/register', { names, email, password });
+            const response = await axios.post('http://localhost:5000/api/register', { names, email, password });
             navigate('/login')
         } catch (err) {
             setSubmitting(false)
-            console.log(err)
+            toast.error(err.response.data.message)
         }
 
     }
@@ -51,11 +51,11 @@ function Register() {
                     <form onSubmit={handleSubmit} className={submitting ? 'submitting' : ''}>
                         <label>
                             <p>Names</p>
-                            <input type="text" placeholder='someone' onChange={(e) => setNames(e.target.value)} required />
+                            <input type="text" autoComplete='off' placeholder='someone' onChange={(e) => setNames(e.target.value)} required />
                         </label>
                         <label>
                             <p>Email</p>
-                            <input type="email" placeholder='someone@example.com' onChange={(e) => setEmail(e.target.value)} required />
+                            <input type="email" autoComplete='off' placeholder='someone@example.com' onChange={(e) => setEmail(e.target.value)} required />
                         </label>
                         <label>
                             <p>Password</p>
