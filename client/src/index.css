@@ -82,6 +82,11 @@ body{
   gap: 0px;
 }
 
+.navbar h1 a{
+  color: #000;
+  text-decoration: none;
+}
+
 .nav-links a{
   text-decoration: none;
   padding: 0 10px;
@@ -345,6 +350,11 @@ body{
 .library h1{
   text-transform: capitalize;
   font-size: 40px;
+}
+
+.library p{
+  font-size: 18px;
+  font-weight: 600;
 }
 
 .library .button{

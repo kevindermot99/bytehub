@@ -79,18 +79,16 @@ const authenticateToken = (req, res, next) => {
 
 
 // Protected Route HOME
-app.get('/api/alldesigns', authenticateToken, async (req, res) => {
+app.get('/api/auth', authenticateToken, async (req, res) => {
     try {
         const user = await User.findOne({ email: req.user.email });
 
         if (!user) {
             return res.status(404).json({ message: "User not Found" })
         }
-
-        const message = "Welcome to the protected Route";
         const userInfo = { email: req.user.email, names: user.names };
 
-        res.json({ message, userInfo })
+        res.json({ userInfo })
     }
     catch (err) {
         console.log(err)

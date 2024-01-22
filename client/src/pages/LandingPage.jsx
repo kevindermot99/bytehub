@@ -51,9 +51,9 @@ function LandingPage() {
         </div>
       </div>
 
-      <div class="gallery">
+      <div className="gallery">
 
-        <div class="gallery-item">
+        <div className="gallery-item">
           <img className='post' src={design6} />
           <div className='owner'>
             <img className='profile' src={person6} />
@@ -64,7 +64,7 @@ function LandingPage() {
           </div>
         </div>
 
-        <div class="gallery-item">
+        <div className="gallery-item">
           <img className='post' src={design1} />
           <div className='owner'>
             <img className='profile' src={person1} />
@@ -75,7 +75,7 @@ function LandingPage() {
           </div>
         </div>
 
-        <div class="gallery-item">
+        <div className="gallery-item">
           <img className='post' src={design2} />
           <div className='owner'>
             <img className='profile' src={person2} />
@@ -86,7 +86,7 @@ function LandingPage() {
           </div>
         </div>
 
-        <div class="gallery-item">
+        <div className="gallery-item">
           <img className='post' src={design4} />
           <div className='owner'>
             <img className='profile' src={person4} />
@@ -97,7 +97,7 @@ function LandingPage() {
           </div>
         </div>
 
-        <div class="gallery-item">
+        <div className="gallery-item">
           <img className='post' src={design5} />
           <div className='owner'>
             <img className='profile' src={person5} />
@@ -108,7 +108,7 @@ function LandingPage() {
           </div>
         </div>
 
-        <div class="gallery-item">
+        <div className="gallery-item">
           <img className='post' src={design3} />
           <div className='owner'>
             <img className='profile' src={person3} />
@@ -119,7 +119,7 @@ function LandingPage() {
           </div>
         </div>
 
-        <div class="gallery-item">
+        <div className="gallery-item">
           <img className='post' src={design7} />
           <div className='owner'>
             <img className='profile' src={person1} />
@@ -130,7 +130,7 @@ function LandingPage() {
           </div>
         </div>
 
-        <div class="gallery-item">
+        <div className="gallery-item">
           <img className='post' src={design8} />
           <div className='owner'>
             <img className='profile' src={person2} />
@@ -141,7 +141,7 @@ function LandingPage() {
           </div>
         </div>
 
-        <div class="gallery-item">
+        <div className="gallery-item">
           <img className='post' src={design9} />
           <div className='owner'>
             <img className='profile' src={person3} />
@@ -152,7 +152,7 @@ function LandingPage() {
           </div>
         </div>
 
-        <div class="gallery-item">
+        <div className="gallery-item">
           <img className='post' src={design15} />
           <div className='owner'>
             <img className='profile' src={person3} />
@@ -163,7 +163,7 @@ function LandingPage() {
           </div>
         </div>
 
-        <div class="gallery-item">
+        <div className="gallery-item">
           <img className='post' src={design16} />
           <div className='owner'>
             <img className='profile' src={person4} />
@@ -174,7 +174,7 @@ function LandingPage() {
           </div>
         </div>
 
-        <div class="gallery-item">
+        <div className="gallery-item">
           <img className='post' src={design10} />
           <div className='owner'>
             <img className='profile' src={person4} />
@@ -185,7 +185,7 @@ function LandingPage() {
           </div>
         </div>
 
-        <div class="gallery-item">
+        <div className="gallery-item">
           <img className='post' src={design11} />
           <div className='owner'>
             <img className='profile' src={person5} />
@@ -196,7 +196,7 @@ function LandingPage() {
           </div>
         </div>
 
-        <div class="gallery-item">
+        <div className="gallery-item">
           <img className='post' src={design12} />
           <div className='owner'>
             <img className='profile' src={person6} />
@@ -207,7 +207,7 @@ function LandingPage() {
           </div>
         </div>
 
-        <div class="gallery-item">
+        <div className="gallery-item">
           <img className='post' src={design13} />
           <div className='owner'>
             <img className='profile' src={person1} />
@@ -218,7 +218,7 @@ function LandingPage() {
           </div>
         </div>
 
-        <div class="gallery-item">
+        <div className="gallery-item">
           <img className='post' src={design14} />
           <div className='owner'>
             <img className='profile' src={person2} />
@@ -229,7 +229,7 @@ function LandingPage() {
           </div>
         </div>
 
-        <div class="gallery-item">
+        <div className="gallery-item">
           <img className='post' src={design17} />
           <div className='owner'>
             <img className='profile' src={person6} />

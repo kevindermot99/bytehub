@@ -47,7 +47,7 @@ function Register() {
                 </div>
                 <div className="apc-right">
                     <h1>Bytehub.</h1>
-                    <h3>Welcome to the hub! happy to see you</h3>
+                    <h3>Create you free account</h3>
                     <form onSubmit={handleSubmit} className={submitting ? 'submitting' : ''}>
                         <label>
                             <p>Names</p>
