@@ -240,6 +240,83 @@ function LandingPage() {
           </div>
         </div>
 
+        <div className="gallery-item">
+          <img className='post' src={design5} />
+          <div className='owner'>
+            <img className='profile' src={person5} />
+            <div className='op-details'>
+              <h1><span>Benjamin</span><span><FaRegEye /> 97K</span></h1>
+              <p>6 days ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="gallery-item">
+          <img className='post' src={design3} />
+          <div className='owner'>
+            <img className='profile' src={person3} />
+            <div className='op-details'>
+              <h1><span>Sophia</span><span><FaRegEye /> 231</span></h1>
+              <p>Today</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="gallery-item">
+          <img className='post' src={design7} />
+          <div className='owner'>
+            <img className='profile' src={person1} />
+            <div className='op-details'>
+              <h1><span>Alexander</span><span><FaRegEye /> 424k</span></h1>
+              <p>2 weeks ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="gallery-item">
+          <img className='post' src={design8} />
+          <div className='owner'>
+            <img className='profile' src={person2} />
+            <div className='op-details'>
+              <h1><span>Emily</span><span><FaRegEye /> 6k</span></h1>
+              <p>5 days ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="gallery-item">
+          <img className='post' src={design5} />
+          <div className='owner'>
+            <img className='profile' src={person5} />
+            <div className='op-details'>
+              <h1><span>Benjamin</span><span><FaRegEye /> 97K</span></h1>
+              <p>6 days ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="gallery-item">
+          <img className='post' src={design3} />
+          <div className='owner'>
+            <img className='profile' src={person3} />
+            <div className='op-details'>
+              <h1><span>Sophia</span><span><FaRegEye /> 231</span></h1>
+              <p>Today</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="gallery-item">
+          <img className='post' src={design7} />
+          <div className='owner'>
+            <img className='profile' src={person1} />
+            <div className='op-details'>
+              <h1><span>Alexander</span><span><FaRegEye /> 424k</span></h1>
+              <p>2 weeks ago</p>
+            </div>
+          </div>
+        </div>
+
       </div>
 
       <div className='library'>
