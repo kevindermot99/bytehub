@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Routes, Route, BrowserRouter, Router } from 'react-router-dom'
 import AllDesigns from './pages/AllDesigns'
 import Login from './pages/Login'
@@ -10,6 +10,30 @@ import ProtectRoutes from './components/ProtectRoutes'
 
 
 function App() {
+
+  useEffect(() => {
+    const key = "token"
+    const checkAndDeleteItem = (key) => {
+      const storedItem = localStorage.getItem(key);
+      if (storedItem) {
+        const parsedItem = JSON.parse(storedItem);
+        const currentTime = new Date().getTime();
+        const oneHourInMillis = 30 * 1000;
+
+        
+        if (currentTime - parsedItem.timestamp >= oneHourInMillis) {
+          
+          localStorage.removeItem(key);
+        }
+      }
+    };
+
+    setInterval(() => {
+      checkAndDeleteItem();
+    }, 2000);
+
+  }, []);
+  
 
   return (
     <>

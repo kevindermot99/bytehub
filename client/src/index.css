@@ -1048,3 +1048,20 @@ input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
     -webkit-box-shadow: 0 0 0px 1000px white inset !important;
 }
+
+
+.page-header{
+  width: 100%;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background-color: cadetblue; */
+  margin-bottom: 30px;
+}
+
+.page-header h1{
+  font-size: 35px;
+  font-weight: 600;
+}

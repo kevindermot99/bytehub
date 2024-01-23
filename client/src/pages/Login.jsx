@@ -25,6 +25,17 @@ function Login() {
       e.preventDefault();
       const response = await axios.post('http://localhost:5000/api/login', { email, password });
       localStorage.setItem('token', response.data.token);
+
+      const key = "token"
+      const value = response.data.token
+      const setItemWithTimestamp = (key, value) => {
+        const item = {
+          value: value,
+          timestamp: new Date().getTime(),
+        };
+        localStorage.setItem(key, JSON.stringify(item));
+      };
+
       navigate('/', { replace: true })
     }
 
