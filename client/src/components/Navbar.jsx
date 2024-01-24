@@ -170,7 +170,7 @@ function Navbar() {
                                 </div>
                             </div>
                         </div>
-                        <div className="s-section">
+                        {/* <div className="s-section">
                             <h3> Delete Account </h3>
                             <p>Enter your password to confirm:</p>
                             <form onSubmit={deleteAccount} >
@@ -178,7 +178,7 @@ function Navbar() {
                                 <div className={`btnloader ${btnLoading ? "show" : ''}`}></div>
                                 <input type="submit" value="Delete" className='save' />
                             </form>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>

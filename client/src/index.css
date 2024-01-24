@@ -345,11 +345,12 @@ body{
   visibility: visible;
 }
 
+
 .settings-body{
   width: 90%;
   max-width: 600px;
   height: 90%;
-  max-height: 500px;
+  max-height: 380px;
   background-color: #fff;
   border-radius: 10px;
   overflow: hidden;
