@@ -84,6 +84,7 @@ const authenticateToken = (req, res, next) => {
     });
 };
 
+
 app.put('/api/updateUser/:id', async (req, res) => {
     try {
         const id = req.params.id;
@@ -97,34 +98,6 @@ app.put('/api/updateUser/:id', async (req, res) => {
     }
 });
 
-app.delete('/api/deleteUser/:id', async (req,res) => {
-    try{
-        const id = req.params.id;
-        const password = req.body.password;
-
-        const user = await User.findById({_id: id})
-
-        if(user){
-            const passwordCheck = await bcrypt.compare(password, user.password)
-
-            if(passwordCheck){
-                await User.findByIdAndDelete(id)
-                res.status(200).json({message: "deleted"})
-            }
-            else{
-                res.status(401).json({message: "incorect password"})
-            }
-        }
-        else{
-            res.status(401).json({message: "User doesn't exist !! "})
-        }
-
-        
-    }
-    catch (err){
-        res.status(500).json({message: "Internal server error"})
-    }
-})
 
 // auth
 app.get('/api/auth', authenticateToken, async (req, res) => {
