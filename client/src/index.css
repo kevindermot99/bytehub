@@ -87,7 +87,7 @@ body{
   text-decoration: none;
 }
 
-.nav-links a{
+.nav-links a, .nav-links button{
   text-decoration: none;
   padding: 0 10px;
   color: #000;
@@ -96,9 +96,13 @@ body{
   font-size: 15px;
   font-weight: 600;
   position: relative;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
 }
 
-.nav-links a:hover{
+.nav-links a:hover, .nav-links button:hover{
   color: var(--main-color);
 }
 

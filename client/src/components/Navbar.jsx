@@ -110,7 +110,7 @@ function Navbar() {
                         <Link to="/alldesigns">All Designs</Link>
                         <Link to='/mylibrary'>my Library</Link>
                         <a href="https://github.com/kevindermot99/bytehub" target="_blank">GitHub</a>
-                        <Link to="/">Creator</Link>
+                        <button>Creator</button>
                     </div>
                 </li>
                 <div className='topsearch'>
