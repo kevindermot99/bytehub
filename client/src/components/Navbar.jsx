@@ -109,8 +109,7 @@ function Navbar() {
                         {/* <Link to="/">Home</Link> */}
                         <Link to="/alldesigns">All Designs</Link>
                         <Link to='/mylibrary'>my Library</Link>
-                        <a href="https://github.com/kevindermot99/bytehub" target="_blank">GitHub</a>
-                        <button>Creator</button>
+                        <a href="https://github.com/kevindermot99" target="_blank">Creator</a>
                     </div>
                 </li>
                 <div className='topsearch'>
