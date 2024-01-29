@@ -993,7 +993,7 @@ form.submitting .name{
 }
 
 .oaths-p{
-  padding: 10px;
+  padding: 10px 10px 0px;
   text-transform: capitalize;
 }
 
@@ -1005,19 +1005,22 @@ form.submitting .name{
   justify-content: center;
   align-items: flex-start;
   gap: 10px;
+  margin-bottom: 100px;
 }
 
 .oaths button{
   width: fit-content;
   height: 50px;
-  font-size: 14px;
+  font-size: 16px;
   border: none;
   outline: none;
   padding: 0 15px;
   font-size: 15px;
   border-radius: 10px;
   color: #000;
-  font-weight: 500;
+  font-weight: 600;
+  font-family: "Raleway", sans-serif;
+  text-transform: capitalize;
   display: flex;
   justify-content: center;
   align-items: center;
