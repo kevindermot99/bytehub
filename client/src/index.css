@@ -853,14 +853,17 @@ body{
   right: 20px;
   color: #202020;
   text-decoration: none;
-  background-color: var(--border-lines-50);
-  height: 35px;
-  width: 35px;
-  border-radius: 50%;
+  background-color: transparent;
+  font-size: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: bold;
+  transition: .2s;
+}
+
+.apc-right .close:hover{
+  color: var(--main-color);
 }
 
 .apc-right h1{
@@ -1040,12 +1043,24 @@ form.submitting .name{
   width: 26px;
 }
 
+.Toastify{
+  position: absolute;
+  left: 0 !important;
+  right: 0 !important;
+  margin: auto;
+}
+
+.Toastify__toast-container{
+  width: fit-content;
+}
 
 .Toastify__toast{
+  width: unset;
   height: fit-content;
   width: fit-content;
-  padding: 10px 20px;
+  padding: 9px 16px;
   min-height: unset;
+  border-radius: 10px;
 
 }
 

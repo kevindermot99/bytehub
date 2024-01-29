@@ -7,6 +7,8 @@ import github from '../images/github.png'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Lottie from 'react-lottie';
+import { IoClose } from "react-icons/io5";
+
 
 function Register() {
     const [names, setNames] = useState()
@@ -78,7 +80,7 @@ function Register() {
                             <button><img src={google} />with Google</button>
                             <button><img src={github} />with Github</button>
                         </div>
-                        <Link to="/" className='close'>X</Link>
+                        <Link to="/" className='close'><IoClose /></Link>
                     </div>
                     <ToastContainer position="top-center" />
                 </div>

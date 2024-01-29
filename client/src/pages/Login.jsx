@@ -7,6 +7,8 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Lottie from 'react-lottie';
 import lockAnimation from '../lotties/lock.json';
+import { IoClose } from "react-icons/io5";
+
 
 
 function Login() {
@@ -41,7 +43,16 @@ function Login() {
 
     catch (err) {
       setSubmitting(false)
-      toast.error(err.response.data.message, {toastId: customId})
+      toast.error(err.response.data.message, {
+        toastId: customId,
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: false,
+        theme: "light",
+        })
     }
 
   }
@@ -87,7 +98,7 @@ function Login() {
               <button><img src={google} />with Google</button>
               <button><img src={github} />with Github</button>
             </div>
-            <Link className='close' to="/">X</Link>
+            <Link className='close' to="/"><IoClose /></Link>
           </div>
           <ToastContainer />
         </div>
