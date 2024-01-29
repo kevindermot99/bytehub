@@ -122,6 +122,6 @@ app.get('/api/auth', authenticateToken, async (req, res) => {
 
 
 app.listen(port, () => {
-    console.log(`Server is runnig on ${port} niggah !`)
+    console.log(`Server is runnig on port: ${port}`)
 });
 
