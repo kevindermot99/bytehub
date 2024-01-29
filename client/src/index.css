@@ -234,7 +234,7 @@ body{
   justify-content: flex-start;
   align-items: flex-start;
   position: absolute;
-  top: 120%;
+  top: 130%;
   right: 0;
   background-color: #ffffffdc;
   backdrop-filter: blur(4px);
@@ -929,7 +929,7 @@ form input[type="password"]{
   padding: 0 20px;
   transition: .2s;
   border-radius: 10px;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 15px;
   font-family: "Raleway", sans-serif;
 } 
