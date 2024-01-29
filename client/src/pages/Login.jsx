@@ -82,7 +82,7 @@ function Login() {
                 <p>Dont have an account? <Link to="/register">Sign up</Link></p>
               </label>
             </form>
-            <p>- or continue -</p>
+            <p className='oaths-p'>or continue</p>
             <div className='oaths'>
               <button><img src={google} />with Google</button>
               <button><img src={github} />with Github</button>
