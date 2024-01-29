@@ -435,7 +435,7 @@ body{
   transition: .2s;
   opacity: 0;
   visibility: hidden;
-  transform: translateX(-10px);
+  /* transform: translateX(-10px); */
 }
 
 .s-section form .edit:focus ~ .save{

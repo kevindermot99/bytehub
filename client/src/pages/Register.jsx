@@ -27,13 +27,22 @@ function Register() {
             navigate('/login')
         } catch (err) {
             setSubmitting(false)
-            toast.error(err.response.data.message, {toastId: customId})
+            toast.error(err.response.data.message, {
+                toastId: customId,
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: true,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: false,
+                theme: "light",
+            })
         }
 
     }
 
 
-    
+
 
     const userPlusAnimationOptions = {
         loop: false,
