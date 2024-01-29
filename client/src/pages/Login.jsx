@@ -84,8 +84,8 @@ function Login() {
             </form>
             <p className='oaths-p'>or continue</p>
             <div className='oaths'>
-              <button><img src={google} />with Google</button>
-              <button><img src={github} />with Github</button>
+              <button><img src={google} /></button>
+              <button><img src={github} /></button>
             </div>
             <Link className='close' to="/">X</Link>
           </div>
