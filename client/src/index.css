@@ -113,8 +113,8 @@ body{
 .navbar ul li h1,
 .footer h1{
   font-family: "Salsa", sans-serif;
-  font-weight: 300;
-  font-size: 30px;
+  font-weight: 900;
+  font-size: 25px;
   display: flex;
 }
 

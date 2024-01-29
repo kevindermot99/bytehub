@@ -57,7 +57,7 @@ app.post('/api/login', async (req, res) => {
             return;
         }
 
-        const token = jwt.sign({ email }, 'bytehub', { expiresIn: '1h' })
+        const token = jwt.sign({ email }, 'bytehub')
         res.json({ token })
     }
     catch (err) {

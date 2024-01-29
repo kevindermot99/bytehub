@@ -40,6 +40,7 @@ function Navbar() {
                 console.log(err)
                 setAuthbtns(true)
                 setAuthorized(false)
+                localStorage.removeItem("token")
             }
         };
 
