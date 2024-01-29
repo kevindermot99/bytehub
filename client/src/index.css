@@ -27,7 +27,7 @@ body{
   width: 100%;
   z-index: -1;
   /* background-color: rgba(74, 126, 128, 0.329); */
- 
+  display: none;
 }
 
 .bubbles .bubble{
@@ -56,8 +56,12 @@ body{
 
 .navbar{
   width: 100%;
-  padding: 20px 40px;
-  z-index: 10;
+  padding: 15px 40px;
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  background-color: #ffffff;
+  backdrop-filter: blur(10px);
 }
 
 .navbar ul{
@@ -523,14 +527,14 @@ body{
 
 .hero{
   /* background-color: cadetblue; */
-  min-height: 500px;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 30px;
   padding: 20px;
-  padding-bottom: 50px;
+  /* padding-bottom: 50px; */
 }
 
 .hero h5{
