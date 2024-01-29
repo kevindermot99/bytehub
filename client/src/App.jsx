@@ -6,6 +6,7 @@ import Register from './pages/Register'
 import LandingPage from './pages/LandingPage'
 import NotFound from './pages/NotFound'
 import MyLibrary from './pages/MyLibrary'
+import ForgotPassword from './pages/ForgotPassword'
 import ProtectRoutes from './components/ProtectRoutes'
 
 
@@ -48,6 +49,7 @@ function App() {
           <Route path='/alldesigns' element={<AllDesigns />}></Route>
           <Route path='/login' element={<Login />}></Route>
           <Route path='/register' element={<Register />}></Route>
+          <Route path='/forgot Password' element={<ForgotPassword />}></Route>
           <Route element={<ProtectRoutes />}>
             <Route path='/mylibrary' element={<MyLibrary />}></Route>
           </Route>

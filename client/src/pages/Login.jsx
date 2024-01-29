@@ -18,8 +18,8 @@ function Login() {
   const [submitting, setSubmitting] = useState(false)
 
 
-  const navigate = useNavigate()
-  const customId = "custom-id-yes";
+    const navigate = useNavigate()
+    const customId = "custom-id-yes";
 
   const handleLogin = async (e) => {
     setSubmitting(true)
@@ -84,7 +84,7 @@ function Login() {
               <label>
                 <p>Password</p>
                 <input type="password" placeholder="password" onChange={(e) => setPassword(e.target.value)} required />
-                <Link to="/">forgot password</Link>
+                <Link to="/forgot Password">forgot password</Link>
               </label>
               <label>
                 <button type="submit" className='submitbtn'><span className='name'>Login</span><span className='btnloader'></span></button>

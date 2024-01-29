@@ -805,7 +805,6 @@ body{
 }
 
 .auth-page{
-  background-color: cadetblue;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -845,6 +844,7 @@ body{
   align-items: center;
   gap: 10px;
   position: relative;
+  padding: 50px;
 }
 
 .apc-right .close{
@@ -871,13 +871,14 @@ body{
   font-weight: 300;
   font-size: 30px;
   display: flex;
-  margin-top: 100px;
 }
 
 .apc-right h3{
   font-weight: 600;
   font-size: 16px;
   margin-bottom: 20px;
+  max-width: 400px;
+  text-align: center;
 }
 
 .apc-right form{
@@ -1008,7 +1009,6 @@ form.submitting .name{
   justify-content: center;
   align-items: flex-start;
   gap: 10px;
-  margin-bottom: 100px;
 }
 
 .oaths button{
