@@ -148,7 +148,7 @@ function Navbar() {
                 <div className="settings-body">
                     <div className='settings'>
                         <div className='s-header'>
-                            <h1>Account Settings</h1>
+                            <h1>Settings</h1>
                             <IoClose onClick={closeSettings} />
                         </div>
                         <div className="s-section">
