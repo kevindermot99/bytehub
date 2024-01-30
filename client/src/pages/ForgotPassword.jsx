@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import axios from 'axios'
 import { Link, Navigate, useNavigate } from 'react-router-dom'
 import google from '../images/google.png'
@@ -8,12 +8,14 @@ import 'react-toastify/dist/ReactToastify.css';
 import Lottie from 'react-lottie';
 import lockAnimation from '../lotties/lock.json';
 import { IoClose } from "react-icons/io5";
+import emailjs from "@emailjs/browser";
 
 function forgotPassword() {
   const [names, setNames] = useState()
   const [email, setEmail] = useState()
   const [password, setPassword] = useState()
   const [submitting, setSubmitting] = useState(false)
+  const vcode = useRef<HTMLInputElement>()
 
   const navigate = useNavigate()
   const customId = "custom-id-yes";
@@ -31,7 +33,7 @@ function forgotPassword() {
             <form className={submitting ? 'submitting' : ''}>
               <label>
                 <p>Email</p>
-                <input type="email" autoComplete='on' placeholder='someone@example.com' required />
+                <input ref={vcode} type="email" autoComplete='on' placeholder='someone@example.com' required />
               </label>
               <label>
                 <button type="submit" className='submitbtn'><span className='name'>Send Code</span><span className='btnloader'></span></button>
