@@ -15,7 +15,7 @@ function forgotPassword() {
   const [email, setEmail] = useState()
   const [password, setPassword] = useState()
   const [submitting, setSubmitting] = useState(false)
-  const vcode = useRef<HTMLInputElement>()
+  const vcode = useRef<HTMLInputElement>(null)
 
   const navigate = useNavigate()
   const customId = "custom-id-yes";
@@ -33,7 +33,7 @@ function forgotPassword() {
             <form className={submitting ? 'submitting' : ''}>
               <label>
                 <p>Email</p>
-                <input ref={vcode} type="email" autoComplete='on' placeholder='someone@example.com' required />
+                <input type="email" autoComplete='on' required />
               </label>
               <label>
                 <button type="submit" className='submitbtn'><span className='name'>Send Code</span><span className='btnloader'></span></button>
