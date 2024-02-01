@@ -10,12 +10,16 @@ import lockAnimation from '../lotties/lock.json';
 import { IoClose } from "react-icons/io5";
 import emailjs from "@emailjs/browser";
 
+import { motion } from "framer-motion"
+
+
+
 function forgotPassword() {
   const [names, setNames] = useState()
   const [email, setEmail] = useState()
   const [password, setPassword] = useState()
   const [submitting, setSubmitting] = useState(false)
-  const vcode = useRef<HTMLInputElement>(null)
+  const vcode = useRef < HTMLInputElement > (null)
 
   const navigate = useNavigate()
   const customId = "custom-id-yes";
@@ -25,7 +29,11 @@ function forgotPassword() {
 
   return (
     !localStorage.getItem("token") ?
-      <div className='auth-page'>
+      <motion.div className='auth-page'
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+      >
         <div className="ap-card">
           <div className="apc-right">
             <h1>Bytehub.</h1>
@@ -45,7 +53,7 @@ function forgotPassword() {
           </div>
           <ToastContainer />
         </div>
-      </div>
+      </motion.div>
       : <Navigate to="/" />
   )
 }

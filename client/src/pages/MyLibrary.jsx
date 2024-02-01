@@ -3,10 +3,14 @@ import Navbar from '../components/Navbar'
 
 function MyLibrary() {
   return (
-    <div>
+    <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+      >
       <Navbar />
       MyLibrary
-    </div>
+    </motion.div>
   )
 }
 

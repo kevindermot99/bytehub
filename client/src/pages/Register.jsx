@@ -53,7 +53,11 @@ function Register() {
 
     return (
         !localStorage.getItem("token") ?
-            <div className='auth-page'>
+        <motion.div className='auth-page'
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+      >
                 <div className="ap-card">
 
                     <div className="apc-left">
@@ -93,7 +97,7 @@ function Register() {
                     </div>
                     <ToastContainer position="top-center" />
                 </div>
-            </div>
+            </motion.div>
             : <Navigate to="/" />
 
     )

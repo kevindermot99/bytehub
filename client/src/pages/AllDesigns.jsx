@@ -29,11 +29,16 @@ import design15 from "../images/design15.jpg"
 import design16 from "../images/design16.jpg"
 import design17 from "../images/design17.jpg"
 
+import { motion } from "framer-motion"
 
 
 function AllDesigns() {
   return (
-    <div>
+    <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+      >
       <Navbar />
       <div className='page-header'>
         <h1>All Designs</h1>
@@ -1021,7 +1026,7 @@ function AllDesigns() {
         </div>
 
       </div>
-      </div>
+      </motion.div>
   )
 }
 

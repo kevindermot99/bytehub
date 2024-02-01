@@ -34,11 +34,16 @@ import design15 from "../images/design15.jpg"
 import design16 from "../images/design16.jpg"
 import design17 from "../images/design17.jpg"
 
+import { motion } from "framer-motion"
 
 
 function LandingPage() {
   return (
-    <>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       <Navbar />
       <div className='hero'>
         <h5>Get exclusive designs & other Freatures By signing up now!</h5>
@@ -325,7 +330,7 @@ function LandingPage() {
         <Link to="/register" className='button'><FaUnlockAlt /> Unlock</Link>
       </div>
       <Footer />
-    </>
+    </motion.div>
   )
 }
 
