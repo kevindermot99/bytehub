@@ -78,13 +78,13 @@ function Login() {
             <h3>Welcome back! we're so happy to see you.</h3>
             <form onSubmit={handleLogin} className={submitting ? 'submitting' : ''}>
               <label>
-                <p>Email</p>
-                <input type="email" autoComplete='on' placeholder='someone@example.com' onChange={(e) => setEmail(e.target.value)} required />
+                {/* <p>Email</p> */}
+                <input type="email" autoComplete='on' placeholder='Email' onChange={(e) => setEmail(e.target.value)} required />
               </label>
               <label>
-                <p>Password</p>
-                <input type="password" placeholder="password" onChange={(e) => setPassword(e.target.value)} required />
-                <Link to="/forgot Password">forgot password</Link>
+                {/* <p>Password</p> */}
+                <input type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} required />
+                <Link to="/forgot Password">forgot password?</Link>
               </label>
               <label>
                 <button type="submit" className='submitbtn'><span className='name'>Login</span><span className='btnloader'></span></button>
