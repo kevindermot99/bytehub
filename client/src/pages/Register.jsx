@@ -66,16 +66,16 @@ function Register() {
                         <h3>Create you free account</h3>
                         <form onSubmit={handleSubmit} className={submitting ? 'submitting' : ''}>
                             <label>
-                                <p>Names</p>
-                                <input type="text" autoComplete='off' placeholder='someone' onChange={(e) => setNames(e.target.value)} required />
+                                {/* <p>Names</p> */}
+                                <input type="text" autoComplete='off' placeholder='Names' onChange={(e) => setNames(e.target.value)} required />
                             </label>
                             <label>
-                                <p>Email</p>
-                                <input type="email" autoComplete='off' placeholder='someone@example.com' onChange={(e) => setEmail(e.target.value)} required />
+                                {/* <p>Email</p> */}
+                                <input type="email" autoComplete='off' placeholder='Email' onChange={(e) => setEmail(e.target.value)} required />
                             </label>
                             <label>
-                                <p>Password</p>
-                                <input type="password" placeholder="password" onChange={(e) => setPassword(e.target.value)} required />
+                                {/* <p>Password</p> */}
+                                <input type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} required />
                             </label>
                             <label>
                                 <button type="submit" className='submitbtn'><span className='name'>Create account</span><span className='btnloader'></span></button>
