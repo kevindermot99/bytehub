@@ -875,10 +875,11 @@ body{
 
 .apc-right h3{
   font-weight: 600;
-  font-size: 16px;
+  font-size: 15px;
   margin-bottom: 20px;
   max-width: 400px;
   text-align: center;
+
 }
 
 .apc-right form{
@@ -886,7 +887,7 @@ body{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap:15px;
+  gap:10px;
   width: 100%;
   /* background-color: cadetblue; */
 }
@@ -900,7 +901,7 @@ body{
 }
 
 .apc-right p{
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 600;
 }
 
@@ -923,14 +924,14 @@ form input[type="text"],
 form input[type="password"]{
   border: none;
   outline: none;
-  background-color: #f0f0f038;
-  border: 1px solid var(--border-lines-50);
+  background-color: #f0f0f0bb;
+  border: 1px solid transparent;
   height: 45px;
   padding: 0 20px;
   transition: .2s;
   border-radius: 10px;
   font-weight: 500;
-  font-size: 15px;
+  font-size: 13px;
   font-family: "Raleway", sans-serif;
 } 
 
@@ -958,6 +959,8 @@ form .submitbtn{
   cursor: pointer;
   text-decoration: none;
   transition: .2s;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 form .submitbtn:hover{
@@ -999,6 +1002,7 @@ form.submitting .name{
 .oaths-p{
   padding: 10px 10px 0px;
   text-transform: capitalize;
+  display: none;
 }
 
 .oaths{
@@ -1009,6 +1013,8 @@ form.submitting .name{
   justify-content: center;
   align-items: flex-start;
   gap: 10px;
+  display: none;
+
 }
 
 .oaths button{
