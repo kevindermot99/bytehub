@@ -9,7 +9,6 @@ import Lottie from 'react-lottie';
 import lockAnimation from '../lotties/lock.json';
 import { IoClose } from "react-icons/io5";
 
-import { motion } from "framer-motion"
 
 
 function Login() {
@@ -67,11 +66,7 @@ function Login() {
   return (
     !localStorage.getItem("token") ?
 
-      <motion.div className='auth-page'
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-      >
+      <div className='auth-page'>
         <div className="ap-card">
 
           <div className="apc-left">
@@ -108,7 +103,7 @@ function Login() {
           </div>
           <ToastContainer />
         </div>
-      </motion.div>
+      </div>
       : <Navigate to="/" />
   )
 }

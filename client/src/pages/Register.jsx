@@ -10,6 +10,7 @@ import Lottie from 'react-lottie';
 import { IoClose } from "react-icons/io5";
 
 
+
 function Register() {
     const [names, setNames] = useState()
     const [email, setEmail] = useState()
@@ -53,11 +54,7 @@ function Register() {
 
     return (
         !localStorage.getItem("token") ?
-        <motion.div className='auth-page'
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-      >
+            <div className='auth-page'>
                 <div className="ap-card">
 
                     <div className="apc-left">
@@ -97,7 +94,7 @@ function Register() {
                     </div>
                     <ToastContainer position="top-center" />
                 </div>
-            </motion.div>
+            </div>
             : <Navigate to="/" />
 
     )
