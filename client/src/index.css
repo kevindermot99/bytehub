@@ -12,7 +12,8 @@ body{
   font-family: "Raleway", sans-serif;
 
   /* colors */
-  --main-color: #8a2be2;
+  /* --main-color: #8a2be2; */
+  --main-color: #000000;
   --border-lines: #63636344;
   --border-lines-50: #00000015;
 
